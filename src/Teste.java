@@ -10,7 +10,6 @@ public class Teste {
         ArrayList<Jogos> listaJogos = new ArrayList<>();
         
         do{
-            
             Jogos jogo = new Jogos();
             jogo.haveraJogo();
             listaJogos.add(jogo);

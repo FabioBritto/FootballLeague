@@ -58,7 +58,7 @@ public class Jogos {
             definirPartidas(temperatura);
         }
     }
-    public static void definirPartidas(int temperatura){
+    private static void definirPartidas(int temperatura){
         Random partidas = new Random();
         int numero;
         
@@ -74,7 +74,7 @@ public class Jogos {
         resultadoPartidas(combinacoes,temperatura);
     }
     
-    public static void resultadoPartidas(ArrayList combinacoes, int temperatura){
+    private static void resultadoPartidas(ArrayList combinacoes, int temperatura){
         int[] golsTimes = golsDaPartida(temperatura);
         
         for(int i = 0;i < 4;i++){
@@ -89,7 +89,7 @@ public class Jogos {
         definirVencedores(equipes, combinacoes,timeA,timeB);
     }
     
-    public static int[] golsDaPartida(int temperatura){
+    private static int[] golsDaPartida(int temperatura){
         Random gols = new Random();
         
         int golsTimes[] = new int[4];
@@ -99,7 +99,7 @@ public class Jogos {
         return golsTimes;
     }
     
-    public int definirTemperatura(){
+    private int definirTemperatura(){
         
         int temperatura = Integer.parseInt(JOptionPane.showInputDialog("Por favor, insira a temperatura de hoje:"));
         if(temperatura > maiorTemperatura){
@@ -122,7 +122,7 @@ public class Jogos {
         }
     }
     
-    public static void definirVencedores(Equipes[] equipes, ArrayList combinacoes,int timeA, int timeB){
+    private static void definirVencedores(Equipes[] equipes, ArrayList combinacoes,int timeA, int timeB){
         String vencedor;
         int[] gols = new int[4];
         
